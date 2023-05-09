@@ -59,7 +59,7 @@ mongoose.connect(process.env.MONGO_URL, options).then(
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
-    OverallStat.insertMany(dataOverallStat);
+    // OverallStat.insertMany(dataOverallStat);
   },
   (err) => {
     console.log(`${err} did not connect`);
