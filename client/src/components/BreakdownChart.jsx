@@ -27,7 +27,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
 
   return (
     <Box
-      height={isDashboard ? "400px" : "100%"}
+      height={isDashboard ? "500px" : "100%"}
       width={undefined}
       minHeight={isDashboard ? "325px" : undefined}
       minWidth={isDashboard ? "325px" : undefined}
@@ -117,8 +117,8 @@ const BreakdownChart = ({ isDashboard = false }) => {
       />
       <Box
         position="absolute"
-        top="50%"
-        left="50%"
+        top="45%"
+        left="46%"
         color={theme.palette.secondary[400]}
         textAlign="center"
         pointerEvents="none"
@@ -128,9 +128,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
             : "translate(-50%, -100%",
         }}
       >
-        <Typography variant="h6">
-          {!isDashboard && "Total:"} ${data.yearlySalesTotal}
-        </Typography>
+        <Typography variant="h6">Total: ${data.yearlySalesTotal}</Typography>
       </Box>
     </Box>
   );
