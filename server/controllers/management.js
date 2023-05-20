@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import Transaction from "../models/Transaction.js";
 import User from "../models/User.js";
 
@@ -18,7 +19,7 @@ export const getUserPerformance = async (req, res) => {
       { $match: { _id: new mongoose.Types.ObjectId(id) } },
       {
         $lookup: {
-          from: "affiliateStats",
+          from: "affiliatestats",
           localField: "_id",
           foreignField: "userId",
           as: "affiliateStats",
