@@ -1,6 +1,6 @@
 import { GridColumnMenuContainer } from "@mui/x-data-grid";
 
-const CustomColumnMenu = (props) => {
+const DataGridDataGridCustomColumnMenu = (props) => {
   const { hideMenu, currentColumn, open } = props;
   return (
     <GridColumnMenuContainer hideMenu={hideMenu} open={open}>
@@ -9,4 +9,4 @@ const CustomColumnMenu = (props) => {
   );
 };
 
-export default CustomColumnMenu;
+export default DataGridDataGridCustomColumnMenu;
