@@ -5,7 +5,15 @@ export const api = createApi({
     baseUrl: import.meta.env.VITE_REACT_APP_BASE_URL,
   }),
   reducerPath: "adminApi",
-  tagTypes: ["User", "Products", "Customers", "Geography", "Sales", "Admins"],
+  tagTypes: [
+    "User",
+    "Products",
+    "Customers",
+    "Geography",
+    "Sales",
+    "Admins",
+    "Performance",
+  ],
   endpoints: (build) => ({
     getUser: build.query({
       query: (id) => `general/user/${id}`,
@@ -39,6 +47,10 @@ export const api = createApi({
       query: () => "management/admins",
       providesTags: ["Admins"],
     }),
+    getUserPerformance: build.query({
+      query: ({ id }) => `management/performance/${id}`,
+      providesTags: ["Performance"],
+    }),
   }),
 });
 
@@ -50,4 +62,5 @@ export const {
   useGetGeographyQuery,
   useGetSalesQuery,
   useGetAdminsQuery,
+  useGetUserPerformanceQuery,
 } = api;
