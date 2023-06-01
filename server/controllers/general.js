@@ -31,14 +31,15 @@ export const getDashboardStats = async (req, res) => {
       yearlySalesTotal,
       yearlyTotalSoldUnits,
       monthlyData,
+      dailyData,
       salesByCategory,
     } = overallStats[0];
 
-    const thisMonthStats = overallStats[0].find(
+    const thisMonthStats = monthlyData.find(
       ({ month }) => month === currentMonth
     );
 
-    const todayStats = overallStats[0].find(({ date }) => date === currentDay);
+    const todayStats = dailyData.find(({ date }) => date === currentDay);
 
     res.status(200).json({
       totalCustomers,
