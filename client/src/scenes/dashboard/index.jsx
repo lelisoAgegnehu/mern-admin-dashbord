@@ -135,6 +135,25 @@ function Dashboard() {
             />
           }
         />
+        <Box
+          gridColumn="span 4"
+          gridRow="span 3"
+          bgcolor={theme.palette.background.alt}
+          p="1.5rem"
+          borderRadius="0.55rem"
+        >
+          <Typography variant="h6" sx={{ color: theme.palette.secondary[400] }}>
+            Sales By Category
+          </Typography>
+          <BreakdownChart isDashboard={true} />
+          <Typography
+            p="0 0.6rem"
+            fontSize="0,8rem"
+            sx={{ color: theme.palette.secondary[200] }}
+          >
+            loarme by category and category name and category name
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
